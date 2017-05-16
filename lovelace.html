@@ -150,7 +150,7 @@ Ada, aged seventeen, 1832</div>
 // Write your code here :)
 
 // 1. Write code to select the first image here
-	let firstImage = document.querySelector('body')
+	let firstImage = document.querySelector('img')
 	// if you select the first image, then the src attribute should equal the url on the line below
 	let isFirstAnswerCorrect = (firstImage.src == "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Padlock-silver.svg/20px-Padlock-silver.svg.png")
 	// so then the line above will evaluate to a true or false value
@@ -158,23 +158,23 @@ Ada, aged seventeen, 1832</div>
 	// In the above line, we print out to the console whether it is a true or false statement
 
 // 2. Select the image of Ada Lovelace
-	let lovelaceImage = document.querySelector('body')
+	let lovelaceImage = document.querySelector('#lovelace-image')
 	// you will need to change the text in the querySelector method
 	let isSecondAnswerCorrect = (lovelaceImage.src == "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Padlock-silver.svg/20px-Padlock-silver.svg.png")
 	console.log("is the second answer correct? " + isSecondAnswerCorrect)
 
 // 3. Select the first link in the first paragraph
-	let mathematicianLink = document.querySelector('body')
+	let mathematicianLink = document.querySelector('p a')
 	let isThirdAnswerCorrect = (mathematicianLink.href == "/wiki/Mathematician")
 	console.log("is the third answer correct? " + isThirdAnswerCorrect)
 
 // 4. Select the text of the first link in the first paragraph
-	let linkText = document.querySelector('body')
+	let linkText = document.querySelector('p a')
 	let isFourthAnswerCorrect = linkText.text == 'mathematician'
 	console.log("is the fourth answer correct? " + isFourthAnswerCorrect)
 
 // 5. Select the bold title, above the picture of Ada Lovelace, in the infobox
-	let infoBoxTitle = document.querySelector('body')
+	let infoBoxTitle = document.querySelector('th > .fn').innerHTML
 	let isFifthAnswerCorrect = infoBoxTitle == "Ada, Countess of Lovelace"
 	console.log("is the fifth answer correct? " + isFifthAnswerCorrect)
 </script>
